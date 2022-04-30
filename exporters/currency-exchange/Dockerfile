@@ -13,7 +13,7 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /currency-exchange
+RUN env GOOS=$GOS GOARCH=$GOARCH go build -o /currency-exchange
 
 ##
 ## Deploy
