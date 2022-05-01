@@ -25,3 +25,8 @@ spec:
         image: ghcr.io/alexrocco/my-dashboard/currency-exchange:sha-6e962e0
         ports:
         - containerPort: 8080
+        env:
+        - name: FROM
+          value: EUR
+        - name: TO
+          value: BRL
