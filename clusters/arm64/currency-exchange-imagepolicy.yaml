@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: currency-exchange
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: currency-exchange
+  policy:
+    numerical:
+      order: desc
