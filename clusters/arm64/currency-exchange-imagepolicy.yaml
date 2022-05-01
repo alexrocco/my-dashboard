@@ -10,4 +10,4 @@ spec:
     pattern: '^20.*'
   policy:
     numerical:
-      order: desc
+      order: asc
