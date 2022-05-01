@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency-exchange
+  labels:
+    app: currency-exchange
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currency-exchange
+  template:
+    metadata:
+      labels:
+        app: nginx
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '8080'
+    spec:
+      containers:
+      - name: app
+        image: ghcr.io/alexrocco/my-dashboard/currency-exchange:sha-6e962e0
+        ports:
+        - containerPort: 8080
