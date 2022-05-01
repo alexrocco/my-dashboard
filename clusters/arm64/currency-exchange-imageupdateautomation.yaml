@@ -1,7 +1,7 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: flux-system
+  name: currency-exchange
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -20,5 +20,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./clusters/arm64
+    path: ./exporters/currency-exchange/kustomize
     strategy: Setters
