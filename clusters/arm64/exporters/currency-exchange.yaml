@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: currency-exchange
+  namespace: exporeters
   labels:
     app: currency-exchange
 spec:
