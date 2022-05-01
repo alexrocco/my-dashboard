@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: currency-exchange
-  namespace: exporeters
+  namespace: exporters
   labels:
     app: currency-exchange
 spec:
@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: currency-exchange
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
