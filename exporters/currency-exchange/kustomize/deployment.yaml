@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ghcr.io/alexrocco/my-dashboard/currency-exchange:20220501083515 # {"$imagepolicy": "flux-system:currency-exchange"}
+        image: ghcr.io/alexrocco/my-dashboard/currency-exchange:20220502063101 # {"$imagepolicy": "flux-system:currency-exchange"}
         ports:
         - containerPort: 8080
         env:
